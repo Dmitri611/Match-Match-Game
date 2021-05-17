@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match-Match Game</title>
+</head>
+<body id="body">
+  <div class="wrapper">
+    <header class="header">
+      <div class="logo">
+        <a href="./index.html">
+          <div class="match_size match1_color_back">
+            <span class="roboto500_match">match</span>
+          </div>
+          <div class="match_size match2_color_back">
+            <span class="roboto500_match roboto500_match_two">match</span>
+          </div>
+        </a>
+      </div>
+      <div class="nav">
+        <ul class="nav__list">
+          <li id="li_firstPage" class="nav__list__item first_page">
+            <div class="nav__list__item__icon nav__list__item__icon__aboutGame"></div>
+            <div class="nav__list__item__text_aboutGame">
+              <span id="firstPage" class="roboto400 first_item">About Game</span>
+            </div>
+          </li>
+          <li id="li_secondPage" class="nav__list__item cursor">
+            <div class="nav__list__item__icon nav__list__item__icon__bestScore"></div>
+            <div class="nav__list__item__text__bestScore">
+              <span id="secondPage" class="roboto400">Best Score</span>
+            </div>
+          </li>
+          <li class="nav__list__item cursor">
+            <div class="nav__list__item__icon nav__list__item__icon__gameSetting"></div>
+            <div class="nav__list__item__text__gameSetting">
+              <span class="roboto400">Game Setting</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="register">
+        <button id="btnReg" class="register__btn roboto500_btn_register regButton">register new player</button>
+        <button id="btnStart" class="start__btn roboto500_btn_register">start game</button>
+        <button id="btnStop" class="stop__btn roboto500_btn_register">stop game</button>
+      </div>
+    </header>
+    <main id="app" class="main">
+      <div class="timer__content">
+        <div id="timerDiv" class="timer">
+          <div id="stopwatch">
+            <h4 class="timer_h4__fonts"><time id="time">00:00:00</time></h4>
+          </div>
+        </div>
+      </div>
+      <div id="main" class="main__padding">
+        <div class="main__heading">
+          <h1 class="roboto500_h1">How to play?</h1>
+        </div>
+        <div class="content">
+          <div class="register_new_player">
+              <div class="register_new_player_items">
+                <div class="register_new_player_item_number"><p class="number_one">1</p></div>
+                <div class="register_new_player_item_text">
+                  <span class="roboto400_register_item_text">Register new player in game</span>
+                </div>
+              </div>
+              <div class="register_new_player_example"></div>
+          </div>
+        </div>
+          <div class="register_new_player">
+              <div class="register_new_player_items">
+                <div class="register_new_player_item_number"><p class="number_one">2</p></div>
+                <div class="register_new_player_item_text">
+                  <span class="roboto400_register_item_text">Configure your game settings</span>
+                </div>
+              </div>
+              <div class="configure_setting_example"></div>
+          </div>
+          <div class="register_new_player">
+            <div class="register_new_player_items">
+              <div class="register_new_player_item_number"><p class="number_one">3</p></div>
+              <div class="register_new_player_item_text">
+                <span class="roboto400_register_item_text">Start you new game! Remember card positions and match it before times up.</span>
+              </div>
+            </div>
+            <div class="game_example"></div>
+        </div>
+      </div>
+    </main>
+    <div class="cards_field">
+
+      <div class="card_container">
+        <div id="card1" class="card">
+          <div class="card__front"></div>
+          <div class="card__back"></div>
+        </div>
+      </div>
+
+      <div class="card_container">
+        <div class="card">
+          <div class="card__front">front</div>
+          <div class="card__back">Back</div>
+        </div>
+      </div>
+
+      <div class="card_container">
+        <div class="card">
+          <div class="card__front">front</div>
+          <div class="card__back">Back</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="gray">
+      <div id="window">
+        <div class="form">
+          <div class="form_heading">
+            <h2 class="form_heading_font">Registr new Player</h2>
+          </div>
+        <form action="index.html" id="myform">
+            <div class="input_and_image">
+              <div class="input_items">
+                <input title="The first letter must be capitalized!" id="frstName" pattern="[А-Я]{1}[а-я]{1,23}|[A-Z]{1}[a-z]{1,23}" minlength="3" maxlength="30" type="text" placeholder="FirstName" name="FirstName" class="input" required>
+                <input title="The first letter must be capitalized!" id="lstName" pattern="[А-Я]{1}[а-я]{1,23}|[A-Z]{1}[a-z]{1,23}" minlength="3" maxlength="30" type="text" placeholder="Last Name" name="LastName" class="input" required>
+                <input title="Enter real mail!" id="email" type="email" maxlength="30" placeholder="E-mail" name="Email" class="input" required>
+              </div>
+              <div id="fileSelect" class="image_hero">
+                <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+              </div>
+            </div>
+        </form>
+        </div>
+        <div class="form_button">
+          <div class="form_button_items">
+            <input type="submit" id="addUser" class="btn_addUser cursor btn_addUser_font" value="add user">
+            <input type="reset" id="btnCancel" class="btn_cancel cursor btn_cancel_font" value="cancel">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

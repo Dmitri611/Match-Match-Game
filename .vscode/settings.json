@@ -1,0 +1,10 @@
+{
+  "eslint.autoFixOnSave": true,
+    "cSpell.ignoreWords": [
+        "game",
+        "match"
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+}

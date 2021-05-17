@@ -1,0 +1,590 @@
+// reset.css
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//variable colors
+$ColorHeader: #2196f3;
+$MatchColor2: #ffffff;
+$MatchShadow: rgba(0, 0, 0, 0.25);
+$MatchBoxShadow: rgba(0, 0, 0, 1.0);
+$NavListText: rgba(255, 255, 255, 0.7);
+$firstPage: #1e88e5;
+$h1: rgba(0, 0, 0, 0.87);
+$register_item_text: rgba(0, 0, 0, 0.6);
+$inputsBack: rgba(33, 33, 33, 0.1);
+$formHeading: rgba(0, 0, 0, 0.87);
+$btnCancel: #E3F2FD;
+
+
+//fonts-style
+.roboto500_match {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: $MatchColor2;
+  text-shadow: 0px 4px 4px  $MatchShadow;
+}
+
+.roboto500_btn_register {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: $ColorHeader;
+}
+
+.roboto500_h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: $h1;
+}
+
+.roboto500_match_two {
+  color: $ColorHeader;
+}
+
+.roboto400 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.4px;
+  color: $NavListText;
+}
+.roboto400_register_item_text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $register_item_text;
+}
+
+.number_one {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 21px;
+  color: $MatchColor2;
+}
+
+.form_heading_font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: $formHeading;
+}
+
+.btn_addUser_font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  color: $MatchColor2;
+}
+
+.btn_cancel_font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $ColorHeader;
+}
+
+.timer_h4__fonts {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+//style
+.first_item {
+  color: $MatchColor2;
+}
+
+.first_page {
+  background-color: $firstPage;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 64px;
+  background-color: $ColorHeader;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+.match_size {
+  display: flex;
+  width: 80px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.match1_color_back {
+  background-color: $ColorHeader;
+}
+
+.match2_color_back {
+  background-color: $MatchColor2;
+  box-shadow: 0px 4px 4px  $MatchBoxShadow;
+}
+
+.nav {
+  display: flex;
+  width: 288px;
+  height: 64px;
+  padding-left: 152px;
+}
+
+.nav__list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav__list__item {
+  display: flex;
+  width: 96px;
+  height: 64px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav__list__item__text_aboutGame {
+  display: flex;
+}
+
+.nav__list__item__text__bestScore {
+  display: flex;
+}
+
+.nav__list__item__text__gameSetting {
+  display: flex;
+}
+
+.nav__list__item__icon {
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+
+.nav__list__item__icon__aboutGame {
+  background-image: url("./assets/953818.svg");
+}
+
+.nav__list__item__icon__bestScore {
+  background-image: url("./assets/best.svg");
+}
+
+.nav__list__item__icon__gameSetting {
+  background-image: url("./assets/free-icon-cogwheel-3953263.svg");
+}
+
+.register {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.register__btn {
+  display: flex;
+  width: 207px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $MatchColor2;
+
+  &:hover{
+    border: 1px solid $firstPage;
+    font-size: 15px;
+  }
+
+  &:active{
+    box-shadow: 0px 0px 16px  $MatchBoxShadow;
+    border: 2px solid $firstPage;
+  }
+
+}
+
+.start__btn {
+  display: none;
+  width: 129px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $MatchColor2;
+
+  &:hover{
+    border: 1px solid $firstPage;
+    font-size: 15px;
+  }
+
+  &:active{
+    box-shadow: 1px 3px 7px $MatchBoxShadow;
+    border: 2px solid $firstPage;
+  }
+
+}
+
+.stop__btn {
+  display: none;
+  width: 129px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $MatchColor2;
+
+  &:hover{
+    border: 1px solid $firstPage;
+    font-size: 15px;
+  }
+
+  &:active{
+    box-shadow: 1px 3px 7px $MatchBoxShadow;
+    border: 2px solid $firstPage;
+  }
+
+}
+
+.nav__list__item:hover {
+  background-color:$firstPage;
+  .roboto400 {
+    color: $MatchColor2;
+  }
+
+}
+
+.logo:hover {
+
+  .match_size {
+    width: 120px;
+
+    .roboto500_match {
+      font-size: 18px;
+    }
+
+  }
+
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.main__padding {
+  padding: 61px 404px 0 256px;
+}
+
+.main__heading {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.register_new_player {
+  display: flex;
+  width: 780px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.register_new_player_items {
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  height: 230px;
+  padding-top: 10px;
+}
+
+.register_new_player_item_number {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $ColorHeader;
+  align-items: center;
+  justify-content: center;
+}
+
+.register_new_player_item_text {
+  display: flex;
+  width: 244px;
+  padding-left: 16px;
+}
+
+.register_new_player_example {
+  display: flex;
+  width: 302px;
+  height: 218px;
+  background-image: url("./assets/image_register.svg");
+}
+
+.configure_setting_example {
+  display: flex;
+  width: 94px;
+  height: 59px;
+  background-image: url("./assets/setting.PNG");
+  background-repeat: no-repeat;
+}
+
+.game_example {
+  display: flex;
+  width: 330px;
+  height: 240px;
+  background-image: url("./assets/example.png");
+  background-repeat: no-repeat;
+}
+
+//form
+#window {
+  display: none;
+  width: 639px;
+  height: 460px;
+  margin: 0 auto;
+  background-color: $MatchColor2;
+  z-index: 150;
+  border-radius: 4px;
+  position: fixed;
+  top: 130px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+}
+
+.form {
+  display: flex;
+  width: 607px;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  width: 336px;
+  height: 56px;
+  background-color: $inputsBack;
+  border-radius: 4px 4px 0px 0px;
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: outset;
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+
+  &:valid {
+    background-image: url("./assets/imageValid.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 298px 10px;
+  }
+
+}
+
+.input_items {
+  display: flex;
+  width: 336px;
+  height: 199px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form_heading {
+  display: flex;
+  padding: 21px 0 53px 16px;
+}
+
+.input_and_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.image_hero {
+  display: flex;
+  width: 198px;
+  height: 198px;
+  background-image: url("./assets/Ellipse\ 4.png");
+
+  &:hover {
+    background-image: url("./assets/Ellipse\ 3.png");
+    cursor: pointer;
+  }
+
+}
+
+.form_button {
+  display: flex;
+  padding-left: 390px;
+  padding-top: 95px;
+}
+
+.form_button_items {
+  display: flex;
+  width: 218px;
+  height: 36px;
+  justify-content: space-between;
+}
+
+.btn_addUser {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  border: none;
+  background-color: $ColorHeader;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+
+}
+
+.btn_cancel {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  border: none;
+  background-color: $btnCancel;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+
+}
+
+#gray {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+//timer
+.timer__content {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.timer {
+  width: 256px;
+  height: 64px;
+  background-color: chocolate;
+  align-items: center;
+  display: none;
+  justify-content: center;
+}
+
+
