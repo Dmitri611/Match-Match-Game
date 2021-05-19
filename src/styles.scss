@@ -63,7 +63,6 @@ $inputsBack: rgba(33, 33, 33, 0.1);
 $formHeading: rgba(0, 0, 0, 0.87);
 $btnCancel: #E3F2FD;
 
-
 //fonts-style
 .roboto500_match {
   font-family: Roboto;
@@ -370,6 +369,7 @@ $btnCancel: #E3F2FD;
 .main {
   display: flex;
   width: 100%;
+  flex-direction: column;
 }
 
 .main__padding {

@@ -1,11 +1,11 @@
 import './styles.scss';
-import './cards.scss';
 import './assets/953818.svg';
 import './assets/free-icon-cogwheel-3953263.svg';
 import './assets/best.svg';
 import './assets/one.svg';
 import './assets/image_register.svg';
 import './timer.ts';
+import './components/cards-field/cards-field.ts';
 
 // const body = document.getElementById('body');
 // body!.innerHTML = ``;
@@ -33,7 +33,7 @@ let db: IDBDatabase;
 
 const dbReq = indexedDB.open('database', 1);
 
-dbReq.onupgradeneeded = (event) => {
+dbReq.onupgradeneeded = (event: any) => {
   db = event.target!.result;
   db.createObjectStore('users', { autoIncrement: true });
 };
@@ -54,7 +54,7 @@ const AddUser = () => {
     return false;
   };
 
-  // add image users
+  // add image users NOT WORK!!!!!!!!!!
   const fileSelect = document.getElementById('fileSelect');
   const fileElem = document.getElementById('fileElem');
 
@@ -73,7 +73,8 @@ const AddUser = () => {
     };
     store.add(user);
     show('none');
-    document.getElementById('myform')!.reset();
+    const form = document.getElementById('myform') as HTMLFormElement;
+    form.reset();
     const regBtn = document.getElementById('btnReg');
     regBtn!.style.display = 'none';
     const startBtn = document.getElementById('btnStart');
@@ -81,18 +82,19 @@ const AddUser = () => {
   }
 };
 
-dbReq.onsuccess = (event) => {
-  db = event.target!.result;
+dbReq.onsuccess = (event: any) => {
+  const { target } = event;
+  db = target.result;
   addUser?.addEventListener('click', () => {
     AddUser();
   });
 };
 
 const check = () => {
-  const frstName = document.getElementById('frstName');
-  const lstName = document.getElementById('lstName');
-  const addNewUser = document.getElementById('addUser');
-  const email = document.getElementById('email');
+  const frstName = document.getElementById('frstName') as HTMLInputElement;
+  const lstName = document.getElementById('lstName') as HTMLInputElement;
+  const addNewUser = document.getElementById('addUser') as HTMLInputElement;
+  const email = document.getElementById('email') as HTMLInputElement;
   addNewUser!.disabled =
     frstName!.value.length < 3 ||
     lstName!.value.length < 3 ||
