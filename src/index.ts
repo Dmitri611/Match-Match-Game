@@ -31,7 +31,7 @@ btnCancel.addEventListener('click', () => {
 // indexedDB
 let db: IDBDatabase;
 
-const dbReq = indexedDB.open('database', 1);
+const dbReq = indexedDB.open('Dmitri611', 1);
 
 dbReq.onupgradeneeded = (event: any) => {
   db = event.target!.result;
@@ -53,16 +53,6 @@ const AddUser = () => {
     }
     return false;
   };
-
-  // add image users NOT WORK!!!!!!!!!!
-  const fileSelect = document.getElementById('fileSelect');
-  const fileElem = document.getElementById('fileElem');
-
-  fileSelect!.addEventListener('click', () => {
-    if (fileElem) {
-      fileElem.click();
-    }
-  });
 
   if (isMatch(frstName) && isMatch(lstName)) {
     const user = {
@@ -104,3 +94,21 @@ const check = () => {
   email!.addEventListener('input', check);
 };
 check();
+
+const liSettingPage = document.getElementById('li_setting_page');
+liSettingPage?.addEventListener('click', () => {
+  const content = document.getElementById('main');
+  content!.style.display = 'none';
+  const setting = document.getElementById('setting');
+  setting!.style.display = 'flex';
+
+  const settingPage = document.getElementById('settingPage');
+  settingPage?.classList.add('first_item');
+  liSettingPage.classList.remove('cursor');
+  liSettingPage?.classList.add('first_page');
+  const liFirstPage = document.getElementById('li_firstPage');
+  liFirstPage?.classList.add('cursor');
+  liFirstPage?.classList.remove('first_page');
+  const firstPage = document.getElementById('firstPage');
+  firstPage?.classList.remove('first_item');
+});

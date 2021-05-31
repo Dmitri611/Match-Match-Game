@@ -166,6 +166,16 @@ $btnCancel: #E3F2FD;
   color: rgba(0, 0, 0, 0.4);
 }
 
+.setting_font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+
 //style
 .first_item {
   color: $MatchColor2;
@@ -581,10 +591,46 @@ $btnCancel: #E3F2FD;
 .timer {
   width: 256px;
   height: 64px;
-  background-color: chocolate;
   align-items: center;
   display: none;
   justify-content: center;
+}
+
+.setting {
+  display: none;
+  width: 1000px;
+  height: 252px;
+  margin: 0 auto;
+  background-color: #1e88e5;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+.setting__content {
+  display: flex;
+  width: 50%;
+  background-color: #1e88e5;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gameCards {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.difficulty {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.difficulty__list {
+  display: flex;
 }
 
 
